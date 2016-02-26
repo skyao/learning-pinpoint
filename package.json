@@ -1,0 +1,24 @@
+{
+    "name": "Leaning-Pinpoint",
+    "version": "0.0.1",
+    "description": "Pinpoint学习笔记",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skyao/leaning-pinpoint"
+    },
+    "author": "Sky Ao <aoxiaojian@gmail.com>",
+    "license": "Apache 2",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-gitbook": "~1.5.0",
+        "grunt-gh-pages": "~0.10.0",
+        "grunt-contrib-clean": "~0.6.0",
+        "grunt-contrib-watch": "~0.6.1",
+        "grunt-http-server": "~1.4.0",
+        "grunt-open": "~0.2.3"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.5"
+    }
+}
