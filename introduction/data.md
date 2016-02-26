@@ -1,7 +1,9 @@
 Pinpoint资料
 ===========
 
-Pinpoint的资料，坦白说真的很少，
+Pinpoint的资料，坦白说非常少，尤其中文资料几乎没有。
+
+因此在整理资料时，自己动手翻译了部分内容。
 
 # 官方资料
 
@@ -30,11 +32,12 @@ Wiki上的内容：
 - [Using Pinpoint with Docker](http://yous.be/2015/05/05/using-pinpoint-with-docker/)
 - [Notes on Jetty Plugin for Pinpoint](https://github.com/cijung/Docs/blob/master/JettyPluginNotes.md)
 
-## 安装文档
+## 安装和开发文档
 
-- [快速开始/quickstart](https://github.com/naver/pinpoint/blob/master/quickstart/README.md)
+- [快速开始/quickstart](https://github.com/naver/pinpoint/blob/master/quickstart/README.md): 中文翻译版本[点这里](../installation/quickstart.md)
 - [安装指南/installation guide](https://github.com/naver/pinpoint/blob/master/doc/installation.md)
 - [插件示例/plugin samples](https://github.com/naver/pinpoint-plugin-sample)
+- [告警/Alarm](https://github.com/naver/pinpoint/blob/master/doc/alarm.md)： 中文翻译版本[点这里](../alarm/alarm.md)
 
 # 中文资料
 
