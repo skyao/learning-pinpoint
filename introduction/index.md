@@ -32,7 +32,7 @@ Pinpoint是一个开源的 APM (Application Performance Management/应用性能�
 
 	长期可视化请求数量和应答模式来定位潜在问题。通过在图表上拉拽可以选择请求查看更多的详细信息。
 
-	![](https://github.com/naver/pinpoint/blob/master/doc/img/ss_server-map.png)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/ss_server-map.png)
 
 - 调用栈(CallStack)
 
@@ -44,7 +44,7 @@ Pinpoint是一个开源的 APM (Application Performance Management/应用性能�
 
 	查看应用上的其他详细信息，比如CPU使用率，内存/垃圾回收，TPS，和JVM参数。
 
-    ![](https://github.com/naver/pinpoint/blob/master/doc/img/ss_inspector.png)
+    ![](https://github.com/naver/pinpoint/raw/master/doc/img/ss_inspector.png)
 
 # 架构
 
