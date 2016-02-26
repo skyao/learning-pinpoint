@@ -1,10 +1,14 @@
 bui# Summary
 
-* [Pinpoint](introduction/index.md)
-	* [Pinpoint资料](introduction/data.md)
-	* [APM介绍](introduction/apm.md)
-* [安装Pinpoint](installation/index.md)
-	* [Quick Start](installation/quickstart.md)
+* [Pinpoint(翻译)](introduction/index.md)
+	* [资料](introduction/data.md)
+	* [APM](introduction/apm.md)
+* [Google Dapper](dapper/index.md)
+* [安装](installation/index.md)
+	* [Quick Start(翻译)](installation/quickstart.md)
+* [插件](plugin/index.md)
+
+
 
 
 

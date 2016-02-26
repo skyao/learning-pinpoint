@@ -1,7 +1,7 @@
 Pinpoint
 ===========
 
-> 信息来自 Pinpoint 的 [github首页](https://github.com/naver/pinpoint) ,简单翻译了一下
+> 翻译自 Pinpoint 的 [github 首页内容](https://github.com/naver/pinpoint)
 
 # 介绍
 
