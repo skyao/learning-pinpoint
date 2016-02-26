@@ -11,23 +11,23 @@ Pinpoint-web周期性的检查应用的状态，如果特定前置条件(规则)
 
 1. 配置菜单
 
-	![](./images/alarm_figure01.gif)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/alarm/alarm_figure01.gif)
 
 2. 注册用户
 
-	![](./images/alarm_figure02.gif)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/alarm/alarm_figure02.gif)
 
 3. 创建用户组
 
-	![](./images/alarm_figure03.gif)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/alarm/alarm_figure03.gif)
 
 4. 添加用户到用户组
 
-	![](./images/alarm_figure04.gif)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/alarm/alarm_figure04.gif)
 
 5. 设置告警规则
 
-	![](./images/alarm_figure04.gif)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/alarm/alarm_figure05.gif)
 
 ## 告警规则
 

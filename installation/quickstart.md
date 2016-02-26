@@ -75,16 +75,16 @@ TestApp - 运行 quickstart/bin/start-testapp.sh
 
 - Collector
 
-	![](./images/ss_quickstart-collector-log.png)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/ss_quickstart-collector-log.png)
 	> 注：如果启动不起来，总是打印"starting pinpoint-quickstart-web \*\*/180 (close wait limit)"，最后180秒超时失败。请尝试再次执行一遍"init-hbase.sh".
 
 - Web UI
 
-	![](./images/ss_quickstart-web-log.png)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/ss_quickstart-web-log.png)
 
 - TestApp
 
-	![](./images/ss_quickstart-testapp-log.png)
+	![](https://github.com/naver/pinpoint/raw/master/doc/img/ss_quickstart-testapp-log.png)
 
 # 检查状态
 
