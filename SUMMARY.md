@@ -5,9 +5,10 @@ bui# Summary
 	* [APM](introduction/apm.md)
 * [Google Dapper](dapper/index.md)
 * [安装](installation/index.md)
-	* [Quick Start(翻译)](installation/quickstart.md)
+	* [官方文档Quick Start(翻译)](installation/quickstart.md)
 * [插件](plugin/index.md)
-
+* [告警](alarm/index.md)
+	* [官方文档Alarm(翻译)](alarm/alarm.md)
 
 
 
