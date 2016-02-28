@@ -35,8 +35,8 @@ Wiki上的内容：
 ## 安装和开发文档
 
 - [快速开始/quickstart](https://github.com/naver/pinpoint/blob/master/quickstart/README.md): 中文翻译版本[点这里](../installation/quickstart.md)
-- [安装指南/installation guide](https://github.com/naver/pinpoint/blob/master/doc/installation.md)
-- [插件示例/plugin samples](https://github.com/naver/pinpoint-plugin-sample)
+- [安装指南/installation guide](https://github.com/naver/pinpoint/blob/master/doc/installation.md): 中文翻译版本 [点这里](../installation/guide.md)
+- [插件示例/plugin samples](https://github.com/naver/pinpoint-plugin-sample): 中文翻译版本 [点这里](../plugin/plugin_sample.md)
 - [告警/Alarm](https://github.com/naver/pinpoint/blob/master/doc/alarm.md)： 中文翻译版本[点这里](../alarm/alarm.md)
 
 # 中文资料
