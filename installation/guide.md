@@ -136,10 +136,118 @@ Pinpoint Collector 有 2 个配置文件: pinpoint-collector.properties 和 hbas
 
 可以在这里看一下默认配置文件: [pinpoint-collector.properties](https://github.com/naver/pinpoint/blob/master/collector/src/main/resources/pinpoint-collector.properties), [hbase.properties](https://github.com/naver/pinpoint/blob/master/collector/src/main/resources/hbase.properties)
 
+# Pinpoint Web
+
+需要有下面的war文件来部署到web容器中：
+
+	pinpoint-web-$VERSION.war
+
+如果手工构建，这个文件的路径会是 $PINPOINT_PATH/collector/target/pinpoint-web-$VERSION.war。
+
+## 安装
+
+由于Pinpoint Web 被打包为可部署的war文件，可以像部署其他web应用一样部署到web容器。
+
+## 配置
+
+和collector类似，Pinpoint web有和安装相关的配置文件：pinpoint-web.properties 和 hbase.properties.
+
+确保检查下面的配置项：
+
+- hbase.properties - 包含连接到HBase的配置
+
+    - hbase.client.host (默认: localhost)
+    - hbase.client.port (默认: 2181)
+
+这些配置文件在war文件下的 WEB-INF/classes/ 目录.
+
+可以在这里看一下默认配置文件: [pinpoint-web.properties](https://github.com/naver/pinpoint/blob/master/web/src/main/resources/pinpoint-web.properties), [hbase.properties](https://github.com/naver/pinpoint/blob/master/web/src/main/resources/hbase.properties)
+
+# Pinpoint Agent
+
+下载后解压Pinpint Agent文件， pinpoint-agent 目录层次如下：
+
+    pinpoint-agent
+    |-- boot
+    |   |-- pinpoint-bootstrap-core-$VERSION.jar
+    |-- lib
+    |   |-- pinpoint-profiler-$VERSION.jar
+    |   |-- pinpoint-profiler-optional-$VERSION.jar
+    |   |-- pinpoint-rpc-$VERSION.jar
+    |   |-- pinpoint-thrift-$VERSION.jar
+    |   |-- ...
+    |-- pinpoint-bootstrap-$VERSION.jar
+    |-- pinpoint.config
+
+如果手工构建这个目录会在这里： $PINPOINT_PATH/agent/target/pinpoint-agent.
+
+可以移动/解压pinpoint-agent目录的内容到任何未知。安装指南后面用$AGENT_PATH来引用这个目录的全路径.
+
+## 安装
 
 
+Pinpoint Agent 作为一个java agent附加到需要采样的应用(例如 Tomcat).
 
+为了让agent生效，在运行应用时需要设置 -javaagent JVM 参数为 $AGENT_PATH/pinpoint-bootstrap-$VERSION.jar:
 
+	-javaagent:$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar
 
+另外，Pinpoint Agent 需要两个命令行参数来在分布式系统中标记自身:
 
+- Dpinpoint.agentId - 唯一标记agent运行所在的应用
+- Dpinpoint.applicationName - 将许多的同样的应用实例分组为单一服务
+
+注意 pinpoint.agentId 必须全局唯一来标识应用实例， 而所有共用相同 pinpoint.applicationName 的应用被当成单个服务的多个实例。
+
+### Tomcat 示例
+
+在tomcat 启动脚本(catalina.sh)中添加 -javaagent, -Dpinpoint.agentId, -Dpinpoint.applicationName.
+
+```bash
+CATALINA_OPTS="$CATALINA_OPTS -javaagent:$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar"
+CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.agentId=$AGENT_ID"
+CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.applicationName=$APPLICATION_NAME"
+```
+
+启动tomcat来开始web应用的采样。
+
+## 配置
+
+在$AGENT_PATH/pinpoint.config 中有很多Pinpoint Agent的配置选项。
+
+这些选项的大部分是自我描述的，而最重要的必须检查的配置选项是collector ip address 和 TCP/UDP 端口。Agent需要这些值来创建到collector的连接并正确工作。
+
+在 pinpoint.config 中相应的设置这些值:
+
+- profiler.collector.ip (默认: 127.0.0.1)
+- profiler.collector.tcp.port (collector中是 collector.tcpListenPort - 默认: 9994)
+- profiler.collector.stat.port (collector中是 collector.udpStatListenPort - 默认: 9995)
+- profiler.collector.span.port (collector中是 collector.udpSpanListenPort - 默认: 9996)
+
+可以在 [这里](https://github.com/naver/pinpoint/blob/master/agent/src/main/resources/pinpoint.config) 看一下默认的带有所有可用配置选项的 pinpoint.config 文件.
+
+# 杂项
+
+## 将web请求路由到agent
+
+从 1.5.0 版本开始, Pinpoint 可以通过collector从web直接发送请求到agent(反之亦然). 为此需要使用Zookeeper 来协调agent和collector之间和collectors 和 web 之间的通讯通道. 在此之上，实时通讯(例如活动线程数量监控)才变的可能.
+
+通常使用HBase后端提供的Zookeeper实例，这样就不需要额外的Zookeeper配置。相关的配置选项在这里：
+
+- Collector - pinpoint-collector.properties
+
+	- cluster.enable
+	- cluster.zookeeper.address
+	- cluster.zookeeper.sessiontimeout
+	- cluster.listen.ip
+	- cluster.listen.port
+
+- Web - pinpoint-web.properties
+
+	- cluster.enable
+	- cluster.web.tcp.port
+	- cluster.zookeeper.address
+	- cluster.zookeeper.sessiontimeout
+	- cluster.zookeeper.retry.interval
+	- cluster.connect.address
 
