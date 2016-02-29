@@ -30,7 +30,8 @@ ServiceType 和 AnnotationKey的编码值必须唯一. 如果编写一个私有�
 
     - Server: 1900 ~ 1999
     - DB client: 2900 ~ 2999
-    - Cache client: 8999 ~ 8999		(这里的范围貌似有点问题，已经开 [issue](https://github.com/naver/pinpoint-plugin-sample/issues/21) 给pinpoint确认)
+    - ~~Cache client: 8999 ~ 8999~~		(原文档笔误，已经和pinpoint确认，具体见 [issue](https://github.com/naver/pinpoint-plugin-sample/issues/21))
+    - Cache client: 8900 ~ 8999
     - RPC client: 9900 ~ 9999
     - Others: 7500 ~ 7999
 
