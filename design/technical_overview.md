@@ -105,15 +105,50 @@ Table1 每个方法的优缺点
 
 |        | 优点 | 缺点 |
 |--------|--------|--------|
-| 手工跟踪 | - 要求更少开发资源 - API可以更简单并最终减少bug的数量 | - 开发人员必须修改代码 - 跟踪级别低|
-| 自动跟踪 | - 开发人员不需要修改代码 - 可以收集到更多精确的数据因为字节码中的更多信息 | - 在开发pinpoint时，和实现一个手工方法相比，需要10倍开销来实现一个自动方法 - 需要更高能力的可以开发人员 |
+| 手工跟踪 | 1. 要求更少开发资源 2. API可以更简单并最终减少bug的数量 | 1. 开发人员必须修改代码 2. 跟踪级别低|
+| 自动跟踪 | 1. 开发人员不需要修改代码 2. 可以收集到更多精确的数据因为字节码中的更多信息 | 1. 在开发pinpoint时，和实现一个手工方法相比，需要10倍开销来实现一个自动方法 2. 需要更高能力的开发人员，可以立即识别需要跟踪的类库代码并决定跟踪点 3. 增加bug发生的可能性因为使用了如字节码增强这样的高级开发技巧 |
+
+字节码增强是一种高难度和高风险的技术。但是，使用这种技术有很多好处，考虑开发资源和难度级别。（补充：这段话翻译的好难受。。。)
+
+虽然它需要大量的开发资源，在开发服务上它需要很少的资源。例如，下面展示了使用字节码增强的自动方法和使用类库的手工方法(在这里的上下文中，开销是为澄清而假设的随机数)之间的开销。
+
+- 自动方法: 总共 100
+
+    - Pinpoint开发开销: 100
+    - 服务实施的开销: 0
+
+- 手工方法: 总共 30
+
+    - Pinpoint开发开销: 20
+    - 服务实施的开销: 10
+
+上面的数据告诉我们手工方法比自动方法有更合算。但是，不适用于我们的在NAVER的环境。在NAVER我们有几千个服务因此在上面的数据中需要修改用于服务实施的开销。如果我们有10个服务需要修改，总开销计算如下：
 
 
+Pinpoint开发开销 20 + 服务实施开销 10 x 10 = 120
+
+由于这个结果，自动方法是一个更合算的方式。
+
+我们很幸运的在pinpoint团队中拥有很多高能力而专注于Java的开发人员。因此，我们相信克服pinpoint开发中的技术难题只是个时间问题。
+
+## 字节码增强的价值
+
+我们选择字节码增强的理由，除了前面描述的那些外，还有下面的强有力的观点：
+
+### 隐藏API
+
+一旦API被暴露给开发人员使用，我们，作为API的提供者，就不能随意的修改API。这样的限制会给我们增加压力。
+
+我们可能修改API来纠正错误设计或者添加新的功能。但是，如果收到限制去做这些，对我们来说很难改进API。解决这个问题的最好的答案是一个可升级的系统设计，而每个人都知道这不是一个容易的选择。如果我们不能掌控未来，就不可能创建完美的API设计。
+
+而使用字节码增强技术，我们就不必担心暴露跟踪API而可以持续改进设计，不用考虑依赖关系。对于那些计划使用pinpoint开发应用的人，换一句话说，这代表对于pinpoint开发人员，API是可变的。现在，我们将保留隐藏API的想法，因为改进性能和设计是我们的第一优先级。
+
+## 启用或者禁用
 
 
+The disadvantage of using bytecode instrumentation is that it could affect your applications when a problem occurs in the profiling code of a library or Pinpoint itself. However, you can solve it by enabling or disabling Pinpoint with easy because you don't have to change code.
 
-
-
+You can easily enable Pinpoint to your applications by adding the three lines (associated with the configuration of the Pinpoint agent) below into your JVM startup script.
 
 
 
