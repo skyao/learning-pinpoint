@@ -8,6 +8,7 @@ bui# Summary
 	* [官方文档 Installation Guide(翻译)](installation/guide.md)
 * [设计](design/index.md)
 	* [Google Dapper](design/dapper/index.md)
+	* [Pinpoint技术概述(翻译)](design/technical_overview.md)
 * [插件](plugin/index.md)
 	* [官方文档 Plugin Sample(翻译)](plugin/plugin_sample.md)
 * [告警](alarm/index.md)

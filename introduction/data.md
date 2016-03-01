@@ -28,19 +28,19 @@ Wiki上的内容：
 
 还有几份介绍和使用资料，可以说是目前仅有的一点点文档了：
 
-- [Technical Overview of Pinpoint](https://github.com/naver/pinpoint/wiki/Technical-Overview-Of-Pinpoint)
+- [Technical Overview of Pinpoint](https://github.com/naver/pinpoint/wiki/Technical-Overview-Of-Pinpoint): 中文翻译版本 [点这里](../design/technical_overview.md)
 - [Using Pinpoint with Docker](http://yous.be/2015/05/05/using-pinpoint-with-docker/)
 - [Notes on Jetty Plugin for Pinpoint](https://github.com/cijung/Docs/blob/master/JettyPluginNotes.md)
 
 ## 安装和开发文档
 
-- [快速开始/quickstart](https://github.com/naver/pinpoint/blob/master/quickstart/README.md): 中文翻译版本[点这里](../installation/quickstart.md)
+- [快速开始/quickstart](https://github.com/naver/pinpoint/blob/master/quickstart/README.md): 中文翻译版本 [点这里](../installation/quickstart.md)
 - [安装指南/installation guide](https://github.com/naver/pinpoint/blob/master/doc/installation.md): 中文翻译版本 [点这里](../installation/guide.md)
 - [插件示例/plugin samples](https://github.com/naver/pinpoint-plugin-sample): 中文翻译版本 [点这里](../plugin/plugin_sample.md)
-- [告警/Alarm](https://github.com/naver/pinpoint/blob/master/doc/alarm.md)： 中文翻译版本[点这里](../alarm/alarm.md)
+- [告警/Alarm](https://github.com/naver/pinpoint/blob/master/doc/alarm.md)： 中文翻译版本 [点这里](../alarm/alarm.md)
 
 # 中文资料
 
 - [开源中国上的介绍页面](http://www.oschina.net/p/pinpoint)
-- [在Windows下安装pinpoint并关联自己的服务(tomcat)](http://blog.csdn.net/u014332404/article/details/50696824): 难得一见的中文资料，赞！
+
 
