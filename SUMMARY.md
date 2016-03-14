@@ -13,5 +13,6 @@ bui# Summary
 	* [官方文档 Plugin Sample(翻译)](plugin/plugin_sample.md)
 * [告警](alarm/index.md)
 	* [官方文档 Alarm(翻译)](alarm/alarm.md)
-
+	* [现有代码实现](alarm/code_implementation.md)
+	* [定制自己的实现](alarm/customize.md)
 
