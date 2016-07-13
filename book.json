@@ -1,19 +1,11 @@
 {
     "author": "Sky Ao <aoxiaojian@gmail.com>",
-    "description": "Records in leaning Pinpoint.",
+    "description": "Pinpoint学习笔记",
     "extension": null,
     "generator": "site",
-    "isbn": null,
     "links": {
-        "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
-        },
         "sidebar": {
-            "Sky's Blog": "http://skyao.github.io/"
+            "Sky@Gitbook": "skyao.gitbooks.io"
         }
     },
     "output": null,
@@ -31,6 +23,6 @@
         "paperSize": "a4"
     },
     "plugins": [],
-    "title": "Leaning Pinpoint/Pinpoint学习笔记",
+    "title": "Pinpoint学习笔记",
     "variables": {}
 }
