@@ -1,28 +1,33 @@
 {
-    "author": "Sky Ao <aoxiaojian@gmail.com>",
-    "description": "Pinpoint学习笔记",
-    "extension": null,
-    "generator": "site",
-    "links": {
-        "sidebar": {
-            "Sky@Gitbook": "skyao.gitbooks.io"
-        }
+  "gitbook": ">=3.2.0",
+  "description": "Pinpoint 学习笔记",
+  "language": "zh-hans",
+  "author": "Sky Ao <aoxiaojian@gmail.cn>",
+  "extension": null,
+  "generator": "site",
+  "links" : {
+    "sidebar" : {
+        "Sky@Gitbook": "https://skyao.gitbooks.io"
+    }
+  },
+  "structure" : {
+        "readme" : "README_gitbook.md"
     },
-    "output": null,
-    "pdf": {
-        "fontSize": 12,
-        "footerTemplate": null,
-        "headerTemplate": null,
-        "margin": {
-            "bottom": 36,
-            "left": 62,
-            "right": 62,
-            "top": 36
-        },
-        "pageNumbers": false,
-        "paperSize": "a4"
-    },
-    "plugins": [],
-    "title": "Pinpoint学习笔记",
-    "variables": {}
+  "plugins": [
+    "-sharing",
+    "toggle-chapters",
+    "edit-link", 
+    "etoc",
+    "back-to-top-button",
+    "tags"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+        "base": "https://github.com/skyao/leaning-pinpoint/edit/master",
+        "label": "Edit"
+    }
+  },
+  "title": "Pinpoint 学习笔记",
+  "variables": {
+  }
 }
