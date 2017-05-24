@@ -23,7 +23,7 @@
   ],
   "pluginsConfig": {
     "edit-link": {
-        "base": "https://github.com/skyao/leaning-pinpoint/edit/master",
+        "base": "https://github.com/skyao/learning-pinpoint/edit/master",
         "label": "Edit"
     }
   },

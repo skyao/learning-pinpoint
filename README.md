@@ -6,7 +6,7 @@ Pinpoint是一个开源的 APM (Application Performance Management/应用性能�
 
 笔记发布于 gitbook，请点击下面的链接阅读:
 
-https://skyao.gitbooks.io/leaning-pinpoint/
+https://skyao.gitbooks.io/learning-pinpoint/
 
 
 
