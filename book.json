@@ -1,31 +1,35 @@
 {
   "gitbook": ">=3.2.0",
-  "description": "Pinpoint 学习笔记",
+  "description": "Pinpoint学习笔记",
   "language": "zh-hans",
-  "author": "Sky Ao <aoxiaojian@gmail.cn>",
+  "author": "敖小剑",
   "extension": null,
   "generator": "site",
   "links" : {
     "sidebar" : {
-        "Sky@Gitbook": "https://skyao.gitbooks.io"
+        "敖小剑的博客": "https://skyao.io"
     }
   },
   "structure" : {
-        "readme" : "README_gitbook.md"
     },
   "plugins": [
+    "-search",
     "-sharing",
-    "toggle-chapters",
-    "edit-link", 
-    "back-to-top-button"
+    "edit-link",
+    "github-buttons@2.1.0"
   ],
   "pluginsConfig": {
     "edit-link": {
         "base": "https://github.com/skyao/learning-pinpoint/edit/master",
         "label": "Edit"
+    },
+    "github-buttons": {
+        "repo": "skyao/learning-pinpoint",
+        "types": ["star"],
+        "size": "small"
     }
   },
-  "title": "Pinpoint 学习笔记",
+  "title": "Pinpoint学习笔记",
   "variables": {
   }
 }

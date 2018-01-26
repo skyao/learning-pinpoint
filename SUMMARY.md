@@ -19,4 +19,4 @@
 	* [官方文档 Alarm(翻译)](alarm/alarm.md)
 	* [现有代码实现](alarm/code_implementation.md)
 	* [定制自己的实现](alarm/customize.md)
-* [全文标签总览](tags.md)
+
