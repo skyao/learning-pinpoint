@@ -33,7 +33,7 @@ pinpoint跟踪单个事务中的分布式请求，基于google Dapper。
 
 当一个消息从Node1发送到Node2(见图1)时，分布式追踪系统的核心是在分布式系统中识别在Node1中处理的消息和在Node2中出的消息之间的关系。
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure1.png)
+![](https://github.com/naver/pinpoint/raw/master/doc/images/td_figure1.png)
 
 图1. 分布式系统中的消息关系
 
@@ -66,7 +66,7 @@ Pinpoint中，核心数据结构由Span, Trace, 和 TraceId组成。
 
 下图描述TraceId的行为，在4个节点之间执行了3次的RPC调用：
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure2.png)
+![](https://github.com/naver/pinpoint/raw/master/doc/images/td_figure2.png)
 
 图2： TraceId行为示例
 
@@ -159,7 +159,7 @@ Pinpoint开发开销 20 + 服务实施开销 10 x 10 = 120
 
 由于字节码增强技术处理java字节码， 有增加开发风险的趋势，同时会降低效率。另外，开发人员更容易犯错。在pinpoint，我们通过抽象出拦截器(interceptor)来改进效率和可达性(accessibility)。pinpoint在类装载时通过介入应用代码为分布式事务和性能信息注入必要的跟踪代码。这会提升性能，因为代码注入是在应用代码中直接实施的。
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure3.png)
+![](https://github.com/naver/pinpoint/raw/master/doc/images/td_figure3.png)
 
 图3： 字节码增强行为
 
@@ -179,7 +179,7 @@ Pinpoint开发开销 20 + 服务实施开销 10 x 10 = 120
 
 图4 说明了上面章节描述的想法：
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure4.png)
+![](https://github.com/naver/pinpoint/raw/master/doc/images/td_figure4.png)
 
 图4： 固定长度编码和可变长度编码的对比
 
@@ -225,7 +225,7 @@ pinpoint不阻塞应用线程，因为编码后的数据或者远程消息被其
 
 图5 展示了当在 TomcatA 和 TomcatB 中安装pinpoint的数据。可以把单个节点的跟踪数据看成single traction，提现分布式事务跟踪的流程。
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure5.png)
+![](https://github.com/naver/pinpoint/raw/master/doc/images/td_figure5.png)
 
 图5：示例1：pinpoint应用
 
@@ -266,7 +266,7 @@ pinpoint不阻塞应用线程，因为编码后的数据或者远程消息被其
 
 5. 从spring mvc控制器中记录数据并完成请求
 
-    ![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure6.png)
+    ![](https://github.com/naver/pinpoint/raw/master/doc/images/td_figure6.png)
 
     图6 示例2：pinpoint应用
 
