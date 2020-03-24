@@ -33,7 +33,7 @@ pinpoint跟踪单个事务中的分布式请求，基于google Dapper。
 
 当一个消息从Node1发送到Node2(见图1)时，分布式追踪系统的核心是在分布式系统中识别在Node1中处理的消息和在Node2中出的消息之间的关系。
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure1.png)
+![]()
 
 图1. 分布式系统中的消息关系
 
@@ -66,7 +66,7 @@ Pinpoint中，核心数据结构由Span, Trace, 和 TraceId组成。
 
 下图描述TraceId的行为，在4个节点之间执行了3次的RPC调用：
 
-![](https://github.com/naver/pinpoint/raw/master/doc/img/td_figure2.png)
+![](https://raw.githubusercontent.com/naver/pinpoint/master/doc/images/td_figure2.png)
 
 图2： TraceId行为示例
 
